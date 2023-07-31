@@ -1,0 +1,199 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <div class="nav-link">
+                <div class="user-wrapper">
+                    <div class="profile-image">
+                        <img src="<?php echo $_SESSION['foto_srcp'];?>" alt="imagenperfil">
+                    </div>
+                    <div class="text-wrapper">
+                        <p class="profile-name">
+                            <?php echo $_SESSION['us_nombre'];?>
+                        </p>
+                        <div>
+                            <small class="designation text-muted"><?php echo $_SESSION['us_cargo'];?></small>
+                            <span class="status-indicator online"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--posible menu-->
+         <li class="nav-item">  <a class="nav-link">SERVER 2.0 </a></li>
+
+        <!--amdinistracion de usuario-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-cliente" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon fa fa-child"></i>
+                <span class="menu-title">Clientes</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="menu-cliente">
+                <ul class="nav flex-column sub-menu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>listacliente"><i class="menu-icon fa fa-list"></i>Clientes Potenciales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>clientesprematriculados"><i class="menu-icon fa fa-list"></i>Prematriculados</a>
+                    </li>
+                    <!-- <li class="nav-item">
+              <a class="nav-link" href="<?php echo SERVERURL;?>clientesmatriculados"><i class="menu-icon fa fa-list"></i>Matriculados</a>
+            </li>-->
+                </ul>
+            </div>
+        </li>
+        <!--amdinistracion de usuario-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-alumno" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon fa fa-child"></i>
+                <span class="menu-title">Alumnos</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="menu-alumno">
+                <ul class="nav flex-column sub-menu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>listacursoalumnos"><i class="menu-icon fa fa-list"></i>Alumnos por Curso</a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+
+
+
+        <!--certificados-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-certificado" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-title">Certificados</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="menu-certificado">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>alumnos"><i class="menu-icon fa fa-plus-circle"></i>Agregar Certificado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>listaalumnos"><i class="menu-icon fa fa-list"></i>Alumnos</a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+
+        <!--amdinistracion de usuario-->
+
+
+        <!--amdinistracion de cursos-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-curso" aria-expanded="false" aria-controls="ui-basic">
+
+                <i class="menu-icon  fa fa-desktop"></i>
+                <span class="menu-title">Cursos / Diplomados</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="menu-curso">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>agregarcurso"><i class="menu-icon fa fa-plus-circle"></i> Agregar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>listacurso"><i class="menu-icon fa fa-list"></i>Lista</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <!--admosntracion de reportes-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-reporte" aria-expanded="false" aria-controls="ui-basic">
+
+                <i class=" menu-icon fa fa-bar-chart-o"></i>
+                <span class="menu-title">Reportes</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="menu-reporte">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="<?php echo SERVERURL;?>estadisticascliente">
+                            <i class="menu-icon fa fa-child"></i>Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>estadisticascurso">
+                            <i class="menu-icon fa fa-book"></i>Cursos /Diplomados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>estadisticasestadoscurso">
+                            <i class="menu-icon  fa fa-cubes"></i>Estados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>estadisticasusuario">
+                            <i class="menu-icon fa fa-users"></i>Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>reportesgenerales">
+                            <i class="menu-icon fa fa-database"></i>General</a>
+                    </li>
+                    <!--  <li class="nav-item">
+                 
+                  <a class="nav-link" href="<?php echo SERVERURL;?>graficos">
+                    <i class="menu-icon fa fa-signal"></i>Graficos Estadísticos</a>
+                </li>-->
+                </ul>
+            </div>
+        </li>
+
+        <!--Condfiguraciones-->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#menu-config" aria-expanded="false" aria-controls="ui-basic">
+
+                <i class="menu-icon fa fa-gears"></i>
+                <span class="menu-title">Configuraciones</span>
+                <i class="menu-arrow"></i>
+            </a>
+
+
+
+            <div class="collapse" id="menu-config">
+                <ul class="nav flex-column sub-menu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>listausuario">
+                            <i class="menu-icon  fa fa-vcard-o"></i> Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>adestados">
+                            <i class="menu-icon  fa fa-cubes"></i>Estados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>adpermisos">
+                            <i class="menu-icon  fa fa-key"></i>Cargos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo SERVERURL;?>adcategoria">
+                            <i class="menu-icon  fa fa-institution"></i>Categorias</a>
+                    </li>
+                </ul>
+            </div>
+
+            <style type="text/css">
+                a[disabled="disabled"] {
+                    pointer-events: none;
+                }
+            </style>
+        </li>
+        <div class="container">
+            <button class="btn btn-primary">
+                <a href="<?php echo SERVERURL;?>reportediario" class="text-white">    Reporte Diario</a>
+            
+            </button>
+        </div>
+
+
+
+
+    </ul>
+</nav>
